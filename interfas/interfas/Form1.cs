@@ -33,10 +33,10 @@ namespace interfas
             cmBxParrillas.DataSource = listaParrillas;
 
             //carga de imagenes
-            //ruta =Path.Combine(Environment.CurrentDirectory, "Reporte_Peliculas.rpt")); 
-            pictureBoxFogata1.Image= Image.FromFile(@"C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\recursos\fogata.gif");
-            pictureBoxFogata2.Image= Image.FromFile(@"C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\recursos\fogata.gif");
-
+            ruta =Environment.CurrentDirectory.Replace(@"interfas\bin\Debug", "")+
+                    @"recursos\fogata.gif"; 
+            pictureBoxFogata1.Image= Image.FromFile(ruta);
+            pictureBoxFogata2.Image= Image.FromFile(ruta);
 
             //configuraciones predeterminadas
             string[] predeterminados;
