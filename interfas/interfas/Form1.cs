@@ -229,6 +229,7 @@ namespace interfas
                 }
 
                 labelTemp1.Text =hrdes1+" : " +mindes1+ " : " +segdes1;
+                labelTempAc1.Text = temperaturaActual1 + " C°";
 
             }
 
@@ -270,6 +271,7 @@ namespace interfas
                 }
 
                 labelTemp2.Text =hrdes2+" : " +mindes2+ " : " +segdes2;
+                labelTempAc2.Text = temperaturaActual2 + " C°";
 
             }
         }
