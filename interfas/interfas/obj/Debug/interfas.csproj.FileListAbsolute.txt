@@ -1,0 +1,11 @@
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\bin\Debug\interfas.exe.config
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\bin\Debug\interfas.exe
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\bin\Debug\interfas.pdb
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.csproj.AssemblyReference.cache
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.csproj.SuggestedBindingRedirects.cache
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.Properties.Resources.resources
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.csproj.GenerateResource.cache
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.csproj.CoreCompileInputs.cache
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.exe
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.pdb
+C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\interfas\obj\Debug\interfas.calentador.resources
