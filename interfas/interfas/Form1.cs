@@ -275,16 +275,10 @@ namespace interfas
         }
         private void compruebaTemperaturaActual()
         {
-            string entradaSerie;
-            if (PuertoSerie.IsOpen)
-            {
-                entradaSerie=PuertoSerie.ReadLine();
-            }
-            else
-            {
-                MessageBox.Show("Puerto no conectado");
-            }
+
             //resta asignar la temperatura conforme a la entrada
+            temperaturaActual1=50;
+            temperaturaActual2=50;
 
         }
         private void enviarTiempo() {
