@@ -475,10 +475,16 @@
         Wp7aemeiQ4nnY6hojwPHFMMPUrB7JwxeEkGBQw2O9Es2DpTNp8rogxAAADs=
 </value>
   </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>131, 17</value>
+  </metadata>
+  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>218, 17</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAk0AAAHSCAYAAADxIv9TAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7svfV3Y1eyv/3+yd9770AyE06audtsi1mWZGaLmVkyM7uZQrPW563a
+        vQAADr0BR/uQrQAA/7JJREFUeF7svfV3Y1eyv/3+yd9770AyE06audtsi1mWZGaLmVkyM7uZQrPW563a
         R3K7O56JZyYN6dQPz5J8dHRIx9qPateu/f/9v7sBCIIgCIIgCP8akSZBEARBEIRzINIkCIIgCIJwDkSa
         BEEQBEEQzoFIkyAIgiAIwjkQaRIEQRAEQTgHIk2CIAiCIAjnQKRJEARBEAThHIg0CYIgCIIgnAORJkEQ
         BEEQhHMg0iQIgiAIgnAORJoEQRAEQRDOgUiTIAiCIAjCORBpEgRBEARBOAciTYIgCIIgCOdApEkQBEEQ
