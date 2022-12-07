@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace interfas
 {
     public partial class calentador : Form
     {
+        string ruta;
+
         public calentador()
         {
             InitializeComponent();
@@ -29,6 +32,12 @@ namespace interfas
             string[] listaParrillas = new string[] {"1","2"};
             cmBxParrillas.DataSource = listaParrillas;
 
+            //carga de imagenes
+            ruta = Directory.GetCurrentDirectory(); 
+            pictureBoxFogata1.Image= Image.FromFile(@"C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\recursos\fogata.gif");
+            pictureBoxFogata2.Image= Image.FromFile(@"C:\Users\2im3q\OneDrive\Escuela\ico\septimo_semestre\Micros\proyeto_instrumentacion\interfas\recursos\fogata.gif");
+
+
             //configuraciones predeterminadas
             string[] predeterminados;
         }
@@ -41,7 +50,7 @@ namespace interfas
                 string sPuerto = CmBxPuertos.SelectedItem.ToString();
                 PuertoSerie.PortName = sPuerto;
                 PuertoSerie.Open();
-                MessageBox.Show("Puerto abierto");
+                MessageBox.Show(ruta);
             }
             catch
             {
@@ -58,7 +67,7 @@ namespace interfas
                 if (PuertoSerie.IsOpen)
                 {
                     PuertoSerie.Close();
-                    MessageBox.Show("Puerto cerrado");
+                    MessageBox.Show(ruta);
                 }
             }
             catch
@@ -111,6 +120,31 @@ namespace interfas
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonIniciar_Click(object sender, EventArgs e)
+        {
+            pictureBoxFogata1.Enabled=false;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            pictureBoxFogata1.Enabled=true;
+        }
+
+        private void labelTimePar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTemp1_Click(object sender, EventArgs e)
         {
 
         }
