@@ -45,8 +45,8 @@
             this.labelTemperatura = new System.Windows.Forms.Label();
             this.labelHoras = new System.Windows.Forms.Label();
             this.configuracion = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonIniciar = new System.Windows.Forms.Button();
+            this.bAgregar = new System.Windows.Forms.Button();
+            this.bIniciar = new System.Windows.Forms.Button();
             this.labelSegundos = new System.Windows.Forms.Label();
             this.lablelMinutos = new System.Windows.Forms.Label();
             this.numericSegundos = new System.Windows.Forms.NumericUpDown();
@@ -69,6 +69,12 @@
             this.labelTemPar2 = new System.Windows.Forms.Label();
             this.labelParrilla2 = new System.Windows.Forms.Label();
             this.pictureBoxFogata2 = new System.Windows.Forms.PictureBox();
+            this.bEncender1 = new System.Windows.Forms.Button();
+            this.bApagar1 = new System.Windows.Forms.Button();
+            this.bContinuar1 = new System.Windows.Forms.Button();
+            this.bContinuar2 = new System.Windows.Forms.Button();
+            this.bApagar2 = new System.Windows.Forms.Button();
+            this.bEncender2 = new System.Windows.Forms.Button();
             this.panelConexion.SuspendLayout();
             this.configuracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericSegundos)).BeginInit();
@@ -212,8 +218,8 @@
             // configuracion
             // 
             this.configuracion.BackColor = System.Drawing.Color.Transparent;
-            this.configuracion.Controls.Add(this.button1);
-            this.configuracion.Controls.Add(this.buttonIniciar);
+            this.configuracion.Controls.Add(this.bAgregar);
+            this.configuracion.Controls.Add(this.bIniciar);
             this.configuracion.Controls.Add(this.labelSegundos);
             this.configuracion.Controls.Add(this.lablelMinutos);
             this.configuracion.Controls.Add(this.numericSegundos);
@@ -234,25 +240,25 @@
             this.configuracion.Size = new System.Drawing.Size(482, 203);
             this.configuracion.TabIndex = 5;
             // 
-            // button1
+            // bAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(252, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Agregar a Predeterminados";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.bAgregar.Location = new System.Drawing.Point(252, 180);
+            this.bAgregar.Name = "bAgregar";
+            this.bAgregar.Size = new System.Drawing.Size(149, 23);
+            this.bAgregar.TabIndex = 16;
+            this.bAgregar.Text = "Agregar a Predeterminados";
+            this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // buttonIniciar
+            // bIniciar
             // 
-            this.buttonIniciar.Location = new System.Drawing.Point(407, 180);
-            this.buttonIniciar.Name = "buttonIniciar";
-            this.buttonIniciar.Size = new System.Drawing.Size(75, 23);
-            this.buttonIniciar.TabIndex = 15;
-            this.buttonIniciar.Text = "Iniciar";
-            this.buttonIniciar.UseVisualStyleBackColor = true;
-            this.buttonIniciar.Click += new System.EventHandler(this.buttonIniciar_Click);
+            this.bIniciar.Location = new System.Drawing.Point(407, 180);
+            this.bIniciar.Name = "bIniciar";
+            this.bIniciar.Size = new System.Drawing.Size(75, 23);
+            this.bIniciar.TabIndex = 15;
+            this.bIniciar.Text = "Iniciar";
+            this.bIniciar.UseVisualStyleBackColor = true;
+            this.bIniciar.Click += new System.EventHandler(this.buttonIniciar_Click);
             // 
             // labelSegundos
             // 
@@ -323,22 +329,25 @@
             // 
             this.panelFogata1.BackColor = System.Drawing.Color.Transparent;
             this.panelFogata1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFogata1.Controls.Add(this.bContinuar1);
+            this.panelFogata1.Controls.Add(this.bApagar1);
+            this.panelFogata1.Controls.Add(this.bEncender1);
             this.panelFogata1.Controls.Add(this.labelTemp1);
             this.panelFogata1.Controls.Add(this.labelTempAc1);
             this.panelFogata1.Controls.Add(this.labelTimePar1);
             this.panelFogata1.Controls.Add(this.labelTemPar1);
             this.panelFogata1.Controls.Add(this.labelParrilla1);
             this.panelFogata1.Controls.Add(this.pictureBoxFogata1);
-            this.panelFogata1.Location = new System.Drawing.Point(41, 332);
+            this.panelFogata1.Location = new System.Drawing.Point(41, 320);
             this.panelFogata1.Name = "panelFogata1";
-            this.panelFogata1.Size = new System.Drawing.Size(220, 137);
+            this.panelFogata1.Size = new System.Drawing.Size(220, 149);
             this.panelFogata1.TabIndex = 6;
             // 
             // pictureBoxFogata1
             // 
             this.pictureBoxFogata1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFogata1.ErrorImage")));
             this.pictureBoxFogata1.InitialImage = null;
-            this.pictureBoxFogata1.Location = new System.Drawing.Point(0, 34);
+            this.pictureBoxFogata1.Location = new System.Drawing.Point(0, 17);
             this.pictureBoxFogata1.Name = "pictureBoxFogata1";
             this.pictureBoxFogata1.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxFogata1.TabIndex = 0;
@@ -357,7 +366,7 @@
             // labelTemPar1
             // 
             this.labelTemPar1.AutoSize = true;
-            this.labelTemPar1.Location = new System.Drawing.Point(106, 43);
+            this.labelTemPar1.Location = new System.Drawing.Point(110, 11);
             this.labelTemPar1.Name = "labelTemPar1";
             this.labelTemPar1.Size = new System.Drawing.Size(105, 13);
             this.labelTemPar1.TabIndex = 8;
@@ -366,7 +375,7 @@
             // labelTimePar1
             // 
             this.labelTimePar1.AutoSize = true;
-            this.labelTimePar1.Location = new System.Drawing.Point(112, 87);
+            this.labelTimePar1.Location = new System.Drawing.Point(116, 55);
             this.labelTimePar1.Name = "labelTimePar1";
             this.labelTimePar1.Size = new System.Drawing.Size(86, 13);
             this.labelTimePar1.TabIndex = 9;
@@ -376,7 +385,7 @@
             // labelTempAc1
             // 
             this.labelTempAc1.AutoSize = true;
-            this.labelTempAc1.Location = new System.Drawing.Point(112, 65);
+            this.labelTempAc1.Location = new System.Drawing.Point(116, 33);
             this.labelTempAc1.Name = "labelTempAc1";
             this.labelTempAc1.Size = new System.Drawing.Size(27, 13);
             this.labelTempAc1.TabIndex = 10;
@@ -385,7 +394,7 @@
             // labelTemp1
             // 
             this.labelTemp1.AutoSize = true;
-            this.labelTemp1.Location = new System.Drawing.Point(112, 110);
+            this.labelTemp1.Location = new System.Drawing.Point(116, 78);
             this.labelTemp1.Name = "labelTemp1";
             this.labelTemp1.Size = new System.Drawing.Size(49, 13);
             this.labelTemp1.TabIndex = 11;
@@ -396,21 +405,24 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.bContinuar2);
+            this.panel1.Controls.Add(this.bApagar2);
+            this.panel1.Controls.Add(this.bEncender2);
             this.panel1.Controls.Add(this.labelTemp2);
             this.panel1.Controls.Add(this.labelTempAc2);
             this.panel1.Controls.Add(this.labelTimePar2);
             this.panel1.Controls.Add(this.labelTemPar2);
             this.panel1.Controls.Add(this.labelParrilla2);
             this.panel1.Controls.Add(this.pictureBoxFogata2);
-            this.panel1.Location = new System.Drawing.Point(300, 333);
+            this.panel1.Location = new System.Drawing.Point(300, 321);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 137);
+            this.panel1.Size = new System.Drawing.Size(220, 148);
             this.panel1.TabIndex = 12;
             // 
             // labelTemp2
             // 
             this.labelTemp2.AutoSize = true;
-            this.labelTemp2.Location = new System.Drawing.Point(112, 110);
+            this.labelTemp2.Location = new System.Drawing.Point(116, 77);
             this.labelTemp2.Name = "labelTemp2";
             this.labelTemp2.Size = new System.Drawing.Size(49, 13);
             this.labelTemp2.TabIndex = 11;
@@ -419,7 +431,7 @@
             // labelTempAc2
             // 
             this.labelTempAc2.AutoSize = true;
-            this.labelTempAc2.Location = new System.Drawing.Point(112, 65);
+            this.labelTempAc2.Location = new System.Drawing.Point(116, 32);
             this.labelTempAc2.Name = "labelTempAc2";
             this.labelTempAc2.Size = new System.Drawing.Size(27, 13);
             this.labelTempAc2.TabIndex = 10;
@@ -428,7 +440,7 @@
             // labelTimePar2
             // 
             this.labelTimePar2.AutoSize = true;
-            this.labelTimePar2.Location = new System.Drawing.Point(112, 87);
+            this.labelTimePar2.Location = new System.Drawing.Point(116, 54);
             this.labelTimePar2.Name = "labelTimePar2";
             this.labelTimePar2.Size = new System.Drawing.Size(86, 13);
             this.labelTimePar2.TabIndex = 9;
@@ -437,7 +449,7 @@
             // labelTemPar2
             // 
             this.labelTemPar2.AutoSize = true;
-            this.labelTemPar2.Location = new System.Drawing.Point(106, 43);
+            this.labelTemPar2.Location = new System.Drawing.Point(110, 10);
             this.labelTemPar2.Name = "labelTemPar2";
             this.labelTemPar2.Size = new System.Drawing.Size(105, 13);
             this.labelTemPar2.TabIndex = 8;
@@ -456,11 +468,65 @@
             // 
             this.pictureBoxFogata2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFogata2.ErrorImage")));
             this.pictureBoxFogata2.InitialImage = null;
-            this.pictureBoxFogata2.Location = new System.Drawing.Point(0, 34);
+            this.pictureBoxFogata2.Location = new System.Drawing.Point(3, 16);
             this.pictureBoxFogata2.Name = "pictureBoxFogata2";
             this.pictureBoxFogata2.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxFogata2.TabIndex = 0;
             this.pictureBoxFogata2.TabStop = false;
+            // 
+            // bEncender1
+            // 
+            this.bEncender1.Location = new System.Drawing.Point(3, 121);
+            this.bEncender1.Name = "bEncender1";
+            this.bEncender1.Size = new System.Drawing.Size(68, 23);
+            this.bEncender1.TabIndex = 12;
+            this.bEncender1.Text = "Encender";
+            this.bEncender1.UseVisualStyleBackColor = true;
+            // 
+            // bApagar1
+            // 
+            this.bApagar1.Location = new System.Drawing.Point(80, 121);
+            this.bApagar1.Name = "bApagar1";
+            this.bApagar1.Size = new System.Drawing.Size(59, 23);
+            this.bApagar1.TabIndex = 13;
+            this.bApagar1.Text = "Apagar";
+            this.bApagar1.UseVisualStyleBackColor = true;
+            // 
+            // bContinuar1
+            // 
+            this.bContinuar1.Location = new System.Drawing.Point(145, 121);
+            this.bContinuar1.Name = "bContinuar1";
+            this.bContinuar1.Size = new System.Drawing.Size(70, 23);
+            this.bContinuar1.TabIndex = 14;
+            this.bContinuar1.Text = "Continuar";
+            this.bContinuar1.UseVisualStyleBackColor = true;
+            // 
+            // bContinuar2
+            // 
+            this.bContinuar2.Location = new System.Drawing.Point(144, 122);
+            this.bContinuar2.Name = "bContinuar2";
+            this.bContinuar2.Size = new System.Drawing.Size(70, 23);
+            this.bContinuar2.TabIndex = 17;
+            this.bContinuar2.Text = "Continuar";
+            this.bContinuar2.UseVisualStyleBackColor = true;
+            // 
+            // bApagar2
+            // 
+            this.bApagar2.Location = new System.Drawing.Point(79, 122);
+            this.bApagar2.Name = "bApagar2";
+            this.bApagar2.Size = new System.Drawing.Size(59, 23);
+            this.bApagar2.TabIndex = 16;
+            this.bApagar2.Text = "Apagar";
+            this.bApagar2.UseVisualStyleBackColor = true;
+            // 
+            // bEncender2
+            // 
+            this.bEncender2.Location = new System.Drawing.Point(2, 122);
+            this.bEncender2.Name = "bEncender2";
+            this.bEncender2.Size = new System.Drawing.Size(68, 23);
+            this.bEncender2.TabIndex = 15;
+            this.bEncender2.Text = "Encender";
+            this.bEncender2.UseVisualStyleBackColor = true;
             // 
             // calentador
             // 
@@ -514,8 +580,8 @@
         private System.Windows.Forms.Label labelTemperatura;
         private System.Windows.Forms.Panel configuracion;
         private System.Windows.Forms.NumericUpDown numericTemperatura;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonIniciar;
+        private System.Windows.Forms.Button bAgregar;
+        private System.Windows.Forms.Button bIniciar;
         private System.Windows.Forms.Label labelSegundos;
         private System.Windows.Forms.Label lablelMinutos;
         private System.Windows.Forms.NumericUpDown numericSegundos;
@@ -537,6 +603,12 @@
         private System.Windows.Forms.Label labelTemPar2;
         private System.Windows.Forms.Label labelParrilla2;
         private System.Windows.Forms.PictureBox pictureBoxFogata2;
+        private System.Windows.Forms.Button bContinuar1;
+        private System.Windows.Forms.Button bApagar1;
+        private System.Windows.Forms.Button bEncender1;
+        private System.Windows.Forms.Button bContinuar2;
+        private System.Windows.Forms.Button bApagar2;
+        private System.Windows.Forms.Button bEncender2;
     }
 }
 
