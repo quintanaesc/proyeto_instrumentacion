@@ -308,6 +308,7 @@
             this.bContinuar1.TabIndex = 14;
             this.bContinuar1.Text = "Continuar";
             this.bContinuar1.UseVisualStyleBackColor = true;
+            this.bContinuar1.Click += new System.EventHandler(this.bContinuar1_Click);
             // 
             // bApagar1
             // 
@@ -317,6 +318,7 @@
             this.bApagar1.TabIndex = 13;
             this.bApagar1.Text = "Apagar";
             this.bApagar1.UseVisualStyleBackColor = true;
+            this.bApagar1.Click += new System.EventHandler(this.bApagar1_Click);
             // 
             // bEncender1
             // 
@@ -326,6 +328,7 @@
             this.bEncender1.TabIndex = 12;
             this.bEncender1.Text = "Encender";
             this.bEncender1.UseVisualStyleBackColor = true;
+            this.bEncender1.Click += new System.EventHandler(this.bEncender1_Click);
             // 
             // labelTemp1
             // 
@@ -411,6 +414,7 @@
             this.bContinuar2.TabIndex = 17;
             this.bContinuar2.Text = "Continuar";
             this.bContinuar2.UseVisualStyleBackColor = true;
+            this.bContinuar2.Click += new System.EventHandler(this.bContinuar2_Click);
             // 
             // bApagar2
             // 
@@ -420,6 +424,7 @@
             this.bApagar2.TabIndex = 16;
             this.bApagar2.Text = "Apagar";
             this.bApagar2.UseVisualStyleBackColor = true;
+            this.bApagar2.Click += new System.EventHandler(this.bApagar2_Click);
             // 
             // bEncender2
             // 
@@ -429,6 +434,7 @@
             this.bEncender2.TabIndex = 15;
             this.bEncender2.Text = "Encender";
             this.bEncender2.UseVisualStyleBackColor = true;
+            this.bEncender2.Click += new System.EventHandler(this.bEncender2_Click);
             // 
             // labelTemp2
             // 
@@ -492,6 +498,7 @@
             // 
             // timer2
             // 
+            this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // calentador

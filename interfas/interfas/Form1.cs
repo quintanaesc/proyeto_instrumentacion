@@ -140,20 +140,14 @@ namespace interfas
             if (PuertoSerie.IsOpen)
             {
                 //recoleccion de datos
-                string tipo = "1";
                 string parrilla = cmBxParrillas.SelectedItem.ToString();
                 string temperatura = numericTemperatura.Value.ToString();
 
                 int hr = int.Parse(numericHoras.Value.ToString());
                 int min = int.Parse(numericMinutos.Value.ToString());
                 int seg = int.Parse(numericSegundos.Value.ToString());
-                string tiempo = ""+((3600*hr)+(60*min)+seg);
 
-                string[] mensaje = new string[4] { tipo, parrilla, temperatura, tiempo };
-
-                //envio por puerto serie
-
-                //iniciar contador
+                //iniciar contadores
                 if (cmBxParrillas.SelectedItem.ToString()=="1")
                 {
                     hrdes1=hr;
@@ -162,6 +156,7 @@ namespace interfas
                     temperaturaDeseada1=int.Parse(numericTemperatura.Value.ToString());
                     labelTemp1.Text ="--:--:--";
                     timer1.Enabled=true;
+                    encenderParrilla("1");
 
                 }
                 else if (cmBxParrillas.SelectedItem.ToString()=="2")
@@ -172,15 +167,7 @@ namespace interfas
                     temperaturaDeseada2=int.Parse(numericTemperatura.Value.ToString());
                     labelTemp2.Text ="--:--:--";
                     timer2.Enabled =true;
-                }
-                //iniciar animacion de la fogata
-                if (cmBxParrillas.SelectedItem.ToString()=="1")
-                {
-                    pictureBoxFogata1.Enabled = true;
-                }
-                else if (cmBxParrillas.SelectedItem.ToString()=="2")
-                {
-                    pictureBoxFogata2.Enabled = true;
+                    encenderParrilla("2");
                 }
             }
             else
@@ -208,10 +195,10 @@ namespace interfas
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            compruebaTemperaturaActual(1);
-            if (temperaturaActual1==temperaturaDeseada1)
-            {
-                if (segdes1>0)
+            compruebaTemperaturaActual();
+            if (temperaturaActual1>=temperaturaDeseada1)//comprueba que la temperatura sea desada
+            {   //comprueba si quedan segundos si no restablese a 60 y resta minutos, luego repite operacion con las horas
+                if (segdes1>0) 
                 {
                     segdes1--;
                 }
@@ -231,9 +218,11 @@ namespace interfas
                         }
                         else
                         {
+                            //una vez que conclueye el temporizador apaga las animaciones y envia
+                            //una señal de apagado de la parrilla por el puerto serie
                             segdes1 = 0;
                             timer1.Stop();
-                            pictureBoxFogata1.Enabled = false;
+                            apagarParrilla("1");
                         }
 
                     }
@@ -247,40 +236,161 @@ namespace interfas
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            compruebaTemperaturaActual(1);
-            if (temperaturaActual1==temperaturaDeseada1)
-            {
-                if (segdes1>0)
+            compruebaTemperaturaActual();
+            if (temperaturaActual2>=temperaturaDeseada2)
+            {//comprueba si quedan segundos si no restablese a 60 y resta minutos, luego repite operacion con las horas
+                if (segdes2>0)
                 {
-                    segdes1--;
+                    segdes2--;
                 }
                 else
                 {
-                    segdes1 = 60;
-                    if (mindes1>0)
+                    segdes2 = 60;
+                    if (mindes2>0)
                     {
-                        segdes1 = 60;
-                        mindes1--;
+                        segdes2 = 60;
+                        mindes2 --;
                     }
                     else
                     {
-                        if (hrdes1>0)
+                        if (hrdes2>0)
                         {
-                            hrdes1--;
+                            hrdes2--;
                         }
                         else
                         {
-                            segdes1 = 0;
-                            timer1.Stop();
-                            pictureBoxFogata1.Enabled = false;
+                            //una vez que conclueye el temporizador apaga las animaciones y envia
+                            //una señal de apagado de la parrilla por el puerto serie
+                            segdes2 = 0;
+                            timer2.Stop();
+                            apagarParrilla("2");
                         }
 
                     }
                 }
 
-                labelTemp1.Text =hrdes1+" : " +mindes1+ " : " +segdes1;
+                labelTemp2.Text =hrdes2+" : " +mindes2+ " : " +segdes2;
 
             }
+        }
+        private void compruebaTemperaturaActual()
+        {
+            string entradaSerie;
+            if (PuertoSerie.IsOpen)
+            {
+                entradaSerie=PuertoSerie.ReadLine();
+            }
+            else
+            {
+                MessageBox.Show("Puerto no conectado");
+            }
+            //resta asignar la temperatura conforme a la entrada
+
+        }
+        private void enviarTiempo() {
+            if (PuertoSerie.IsOpen)
+            {
+                //resta enviar tiempo
+            }
+            else
+            {
+                MessageBox.Show("Puerto no conectado");
+            }
+        }
+        private void encenderParrilla(string parrilla)
+        {
+            if (PuertoSerie.IsOpen)
+            {
+                if (parrilla=="1")
+                {
+                    pictureBoxFogata1.Enabled = true;
+                    PuertoSerie.WriteLine("E1");
+
+                }
+                else if (parrilla=="2")
+                {
+                    pictureBoxFogata2.Enabled = true;
+                    PuertoSerie.WriteLine("E2");
+
+                }
+                else
+                {
+                    pictureBoxFogata1.Enabled = true;
+                    PuertoSerie.WriteLine("E1");
+
+                    pictureBoxFogata2.Enabled = true;
+                    PuertoSerie.WriteLine("E2");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Puerto no conectado");
+            }
+        }
+        private void apagarParrilla(string parrilla) {
+            if (PuertoSerie.IsOpen)
+            {
+                if (parrilla=="1")
+                {
+                    pictureBoxFogata1.Enabled = false;
+                    PuertoSerie.WriteLine("A1");
+
+                }
+                else if (parrilla=="2")
+                {
+                    pictureBoxFogata2.Enabled = false;
+                    PuertoSerie.WriteLine("A2");
+
+                }
+                else
+                {
+                    pictureBoxFogata1.Enabled = false;
+                    PuertoSerie.WriteLine("A1");
+
+                    pictureBoxFogata2.Enabled = false;
+                    PuertoSerie.WriteLine("A2");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Puerto no conectado");
+            }
+        }
+
+        private void bEncender1_Click(object sender, EventArgs e)
+        {
+            encenderParrilla("1");
+        }
+
+        private void bEncender2_Click(object sender, EventArgs e)
+        {
+            encenderParrilla("2");
+        }
+
+        private void bApagar1_Click(object sender, EventArgs e)
+        {
+            apagarParrilla("1");
+            timer1.Stop();
+        }
+
+        private void bApagar2_Click(object sender, EventArgs e)
+        {
+            apagarParrilla("2");
+            timer2.Stop();
+        }
+
+        private void bContinuar1_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled=true;
+            encenderParrilla("1");
+        }
+
+        private void bContinuar2_Click(object sender, EventArgs e)
+        {
+            timer2.Enabled=true;
+            encenderParrilla("2");
         }
     }
 }
