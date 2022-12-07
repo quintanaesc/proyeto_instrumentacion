@@ -24,6 +24,13 @@ namespace interfas
             //obtener los puertos coms en el combobox para los puertos
             string[] ListaPuertos = System.IO.Ports.SerialPort.GetPortNames();
             CmBxPuertos.DataSource = ListaPuertos;
+
+            //Carga las parrillas activas
+            string[] listaParrillas = new string[] {"1","2"};
+            cmBxParrillas.DataSource = listaParrillas;
+
+            //configuraciones predeterminadas
+            string[] predeterminados;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,6 +73,46 @@ namespace interfas
             // recargar los puertos seriales
             string[] ListaPuertos = System.IO.Ports.SerialPort.GetPortNames();
             CmBxPuertos.DataSource = ListaPuertos;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void lableConfiguracion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmBxPuertos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
